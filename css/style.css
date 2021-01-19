@@ -1,0 +1,183 @@
+/* font styles */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+.subHeading {
+    border-bottom: 1px solid black;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: freight-big-pro, serif;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 200;
+}
+
+/* navigation */
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5%;
+  }
+
+#navBar img {
+   padding: 50px;
+  }
+
+#navigation {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+#navigation p {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+#mydiv {
+    position: fixed;
+    z-index: 9;
+    right: 120px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: 175px;
+}
+  
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+#mydiv p {
+    padding: 0px 20px;
+    line-height: 18px;
+}
+
+/* about */
+
+.flexItem {
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 350px;
+}
+
+.flexItem2 {
+    margin: 10px;
+    padding: 10px;
+    width: 700px;
+    height: 350px;
+}
+
+/* skills */
+
+.skillsItem1 {
+    margin: 10px;
+    position: absolute;
+    left: 125px;
+}
+
+.skillsItem2 {
+    margin: 10px;
+    position: relative;
+    left: 50px;
+}
+
+.skillsItem3 {
+    margin: 10px;
+    position: absolute;
+    right: 350px;
+}
+
+.skillsItem4 {
+    margin: 10px;
+    position: relative;
+    left: 200px;
+}
+
+.justifyContent {
+    justify-content: center;
+}
+
+.flexContainer {
+    display: flex;
+    height: 400px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    height: 250px;
+    margin-top: 0 auto;
+    padding: 10px;
+    background-color: black;
+}
+
+.footer1 {
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 100px;
+    color: #ffffff;
+}
+
+.footer h1:hover {
+    cursor: pointer;
+}
+
+.footer2 {
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+.button {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.4s;
+  }
+
+.button:hover {
+    background-color: #E2E6B6;
+    color: #000000;
+    border: 1px solid #E2E6B6;
+    cursor: pointer;
+}

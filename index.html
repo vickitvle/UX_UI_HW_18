@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="index.js">
+  <link rel="stylesheet" href="https://use.typekit.net/tha8uyd.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap" rel="stylesheet"><title>About Me</title>
+</head>
+<body>
+  
+  <!-- nav -->
+
+  <nav id="navBar">
+    <img src="images/logo.png" height="75px" width="100px" alt="Vicki Le">
+    <div id="navigation">
+      <div id="mydiv">
+        <div id="mydivheader">TABLE OF CONTENTS /</div>
+        <p>01. WORK</p>
+        <p>02. ABOUT</p>
+        <p>03. CONTACT</p>
+      </div>
+    </div>
+  </nav>
+
+<!-- movable nav -->
+
+  <script>
+    dragElement(document.getElementById("mydiv"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+
+  <!-- about -->
+
+  <div class="subHeading">
+    <h3>ABOUT ME /</h3>
+  </div>
+
+  <section class="justifyContent flexContainer">
+    <div class="flexItem">
+      <img src="images/self.png" height="300px" width="250px" alt="Vicki Le">
+    </div>
+    <div class="flexItem2">
+      <p>Vicki (Thuy-Vi) Le is a UX designer with a Bachelor of Arts in Sociology (UF c/o 2017). Her education, work as a barista, and love for engaging visual design has driven her passion towards connecting with people, and learning about their motivations, thought-processes, and frustrations, eventually leading to her current enrollment in the UX/UI Design Bootcamp at Columbia.
+    <br><br>
+      Although her life goal is to own a quaint coffee shop that brings together people from all walks of life, she is currently pursuing a career in UX Design and is looking to work alongside creative teams to build meaningful experiences and sustainable solutions for people (from all walks of life).
+    <br><br>
+      When she is not learning about UX/UI Design, she is watching vlogs on YouTube, watching anime (currently: One Piece), reading (favorite: Pachinko), journaling, or creating Spotify playlists.   
+    </p>
+    </div>
+    </section>
+
+
+  <!-- skills -->
+
+  <div class="subHeading">
+      <h3>SKILLS /</h3>
+  </div>
+
+  <section class="justifyContent flexContainer">
+    <div class="skillsItem1">
+      <img src="images/user research.png" height="300px" width="300px" alt="Skills: User Research">
+    </div>
+    <div class="skillsItem2">
+      <img src="images/design.png" height="300px" width="300px" alt="Skills: Design">
+    </div>
+    <div class="skillsItem3">
+      <img src="images/tools.png" height="300px" width="300px" alt="Skills: Tools">
+    </div>
+    <div class="skillsItem4">
+      <img src="images/dev.png" height="300px" width="300px" alt="Skills: Web Development">
+    </div>
+  </section>
+  
+      <!-- footer -->
+
+  <section class="justifyContent footer">
+     <div class="footer1">
+      <h3>LET'S CONNECT /</h3>
+      <h1>hello@vickitvle.com</h1>
+      <br>
+       <p>© 2021. VICKI LE. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="footer2">
+      <button class="button">RESUME</button>
+      <button class="button">LINKEDIN</button>
+      <button class="button">INSTAGRAM</button>
+    </div>
+  </section>
+</body>
+</html>
