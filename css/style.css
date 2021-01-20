@@ -6,8 +6,8 @@ html {
 
 body {
     font-family: 'Roboto Mono', monospace;
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 11px;
+    line-height: 22px;
     font-weight: 200;
     margin: 0 auto;
 }
@@ -160,19 +160,37 @@ h3 {
 
 /* about */
 
-.flexItem {
+.aboutMe-img {
     background-color: #eeeeee;
     margin: 10px;
     padding: 10px;
     width: 250px;
     height: 350px;
+    grid-area: aboutMe-img;
 }
 
-.flexItem2 {
+.aboutMe {
     margin: 10px;
     padding: 10px;
     width: 700px;
     height: 350px;
+    grid-area: aboutMe;
+}
+
+.resumeButton {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    grid-area: resumeButton;
+}
+
+.aboutMe-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    "aboutMe-img aboutMe"
+    "resumeButton aboutMe";
 }
 
 /* skills */
