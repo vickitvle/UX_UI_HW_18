@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }  
+
 /* font styles */
 
 body {
@@ -10,7 +14,7 @@ body {
 
 .subHeading {
     border-bottom: 1px solid black;
-    width: 1050px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -26,6 +30,16 @@ h3 {
     font-size: 18px;
     line-height: 28px;
     font-weight: 200;
+}
+
+#mydiv a {
+    text-decoration: none;
+    color: #000000;
+    transition-duration: 0.4s;
+}
+
+#mydiv a:hover {
+    background-color: #FFFCC9;
 }
 
 /* navigation */
@@ -75,6 +89,75 @@ h3 {
     line-height: 18px;
 }
 
+/* home */
+
+.work1 {
+    grid-area: work1;
+    position: relative;
+    left: -80px;
+    margin: -5px;
+    padding-bottom: 50px;
+}
+
+.work2 {
+    grid-area: work2;
+    position: relative;
+    left: -80px;
+    margin: -5px;
+    padding-bottom: 50px;
+}
+
+.work3 {
+    grid-area: work3;
+    position: relative;
+    left: -80px;
+    margin: -5px;
+    padding-bottom: 50px;
+}
+
+.circle1 {
+    background-color: #81C3F8;
+    grid-area: circle1;
+  }
+
+.circle2 {
+    background-color: #357562;
+    grid-area: circle2;
+}
+
+.circle3 {
+    background-color: #414E68;
+    grid-area: circle3;  
+}
+
+.circle1, .circle2, .circle3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.workGrid {
+    display: grid;
+    margin: 50px;
+    grid-template-areas:
+    "circle1 work1"
+    "circle2 work2"
+    "circle3 work3";
+}
+
+.work1 img {
+    display: none;
+}
+
+.work1 h1:hover ~ img {
+    display: inline-block;
+    cursor: pointer;
+    width: 300px;
+    height: 350px;
+    position: relative;
+}
+
 /* about */
 
 .flexItem {
@@ -98,24 +181,28 @@ h3 {
     margin: 10px;
     position: absolute;
     left: 125px;
+    width: 25%;
 }
 
 .skillsItem2 {
     margin: 10px;
     position: relative;
     left: 50px;
+    width: 25%;
 }
 
 .skillsItem3 {
     margin: 10px;
     position: absolute;
     right: 350px;
+    width: 25%;
 }
 
 .skillsItem4 {
     margin: 10px;
     position: relative;
     left: 200px;
+    width: 25%;
 }
 
 .justifyContent {
@@ -124,6 +211,7 @@ h3 {
 
 .flexContainer {
     display: flex;
+    flex-direction: row;
     height: 400px;
     margin: 10px;
     padding: 10px;
@@ -132,32 +220,33 @@ h3 {
 /* footer */
 
 .footer {
-    display: flex;
-    height: 250px;
-    margin-top: 0 auto;
-    padding: 10px;
-    background-color: black;
-}
-
-.footer1 {
-    margin: 10px;
-    padding: 10px;
-    width: 500px;
-    height: 100px;
-    color: #ffffff;
-}
-
-.footer h1:hover {
-    cursor: pointer;
-}
-
-.footer2 {
-    margin: 10px;
+    display: grid;
+    height: 150px;
     padding: 20px;
-    width: 400px;
-    height: 100px;
-    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-areas:
+    "connect buttons"
+    "copyright copyright";
+}
+
+.connect {
+    color: #ffffff;
+    grid-area: connect;
     align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
+.copyright {
+    align-self: end;
+    justify-self: center;
+    grid-area: copyright;
+    color: #ffffff;
 }
 
 .button {
@@ -167,7 +256,6 @@ h3 {
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 12px;
     font-family: 'Roboto Mono', monospace;
     border-radius: 20px;
@@ -180,4 +268,26 @@ h3 {
     color: #000000;
     border: 1px solid #E2E6B6;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .workGrid {
+        grid-template-areas:
+        "circle1 work1"
+        "circle2 work2"
+        "circle3 work3";
+    }  
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px;
+        grid-template-areas:
+        "connect"
+        "buttons"
+        "copyright";
+    }
 }
