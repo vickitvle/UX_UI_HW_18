@@ -12,12 +12,6 @@ body {
     margin: 0 auto;
 }
 
-.subHeading {
-    border-bottom: 1px solid black;
-    width: 1000px;
-    margin: 0 auto;
-}
-
 h1 {
     font-family: freight-big-pro, serif;
     font-size: 36px;
@@ -25,11 +19,22 @@ h1 {
     font-style: normal;
 }
 
-h3 {
+.subHeading {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
     font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 200;
+}
+
+h3 {
+    font-family: freight-big-pro, serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
 }
 
 #mydiv a {
@@ -89,35 +94,30 @@ h3 {
     line-height: 18px;
 }
 
-/* home */
+/* projects */
 
 .work1 {
     grid-area: work1;
-    position: relative;
-    left: -80px;
-    margin: -5px;
+    padding-left: 10px;
     padding-bottom: 50px;
 }
 
 .work2 {
     grid-area: work2;
-    position: relative;
-    left: -80px;
-    margin: -5px;
+    padding-left: 10px;
     padding-bottom: 50px;
+
 }
 
 .work3 {
     grid-area: work3;
-    position: relative;
-    left: -80px;
-    margin: -5px;
-    padding-bottom: 50px;
+    padding-left: 10px;
 }
 
 .circle1 {
     background-color: #81C3F8;
     grid-area: circle1;
+
   }
 
 .circle2 {
@@ -134,28 +134,17 @@ h3 {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 .workGrid {
     display: grid;
-    margin: 50px;
+    margin: 40px 10%;
+    justify-content: center;
     grid-template-areas:
     "circle1 work1"
     "circle2 work2"
     "circle3 work3";
-}
-
-.work1 img {
-    display: none;
-}
-
-.work1 h1:hover ~ img {
-    display: inline-block;
-    cursor: pointer;
-    width: 300px;
-    height: 350px;
-    position: relative;
 }
 
 /* about */
@@ -164,29 +153,25 @@ h3 {
     background-color: #eeeeee;
     margin: 10px;
     padding: 10px;
-    width: 250px;
-    height: 350px;
     grid-area: aboutMe-img;
 }
 
 .aboutMe {
     margin: 10px;
     padding: 10px;
-    width: 700px;
-    height: 350px;
     grid-area: aboutMe;
 }
 
 .resumeButton {
     margin: 10px;
     padding: 10px;
-    width: 250px;
     text-align: center;
     grid-area: resumeButton;
 }
 
 .aboutMe-grid {
     display: grid;
+    margin: 0 10%;
     justify-content: center;
     grid-template-areas:
     "aboutMe-img aboutMe"
@@ -195,44 +180,45 @@ h3 {
 
 /* skills */
 
-.skillsItem1 {
-    margin: 10px;
-    position: absolute;
-    left: 125px;
-    width: 25%;
-}
-
-.skillsItem2 {
-    margin: 10px;
-    position: relative;
-    left: 50px;
-    width: 25%;
-}
-
-.skillsItem3 {
-    margin: 10px;
-    position: absolute;
-    right: 350px;
-    width: 25%;
-}
-
-.skillsItem4 {
-    margin: 10px;
-    position: relative;
-    left: 200px;
-    width: 25%;
-}
-
-.justifyContent {
-    justify-content: center;
-}
-
-.flexContainer {
+.skillsGrid {
     display: flex;
     flex-direction: row;
-    height: 400px;
-    margin: 10px;
-    padding: 10px;
+    margin: 0 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.skill1, .skill2, .skill3, .skill4 {
+    border-radius: 20%;
+    padding: 20px;
+    width: 300px;
+}
+
+.skill1 {
+    background-color: #959684;
+    color: white;
+    transform: rotate(-20deg);
+}
+
+.skill2 {
+    background-color: #E2E6B6;
+    transform: rotate(10deg);
+}
+
+.skill3 {
+    background-color: #63798E;
+    color: white;
+    transform: rotate(-10deg);
+}
+
+.skill4 {
+    background-color: #F7F6E7;
+    transform: rotate(20deg);
+}
+
+.skills {
+    list-style: none;
 }
 
 /* footer */
@@ -288,24 +274,43 @@ h3 {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600) {
-    .flexContainer {
+@media only screen and (max-width: 600px) {
+    .aboutMe-grid {
+        grid-template-areas:
+        "aboutMe-img"
+        "aboutMe"
+        "resumeButton";
+    }
+
+    .aboutMe-img {
+        margin: 10px;
+        justify-self: center;
+        padding: 10px;
+    }
+
+    .aboutMe, .resumeButton {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .skillsGrid {
         flex-direction: column;
     }
 
-    .workGrid {
-        grid-template-areas:
-        "circle1 work1"
-        "circle2 work2"
-        "circle3 work3";
-    }  
+    .skill1, .skill2, .skill3, .skill4 {
+        width: 200px;
+    }
+    
+    .circle1, .circle2, .circle3 {
+        margin: 20px auto;
+    }
 
     .footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 300px;
         grid-template-areas:
         "connect"
         "buttons"
         "copyright";
     }
-}
+    
+  }
