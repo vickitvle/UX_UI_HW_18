@@ -15,6 +15,7 @@ body {
 h1 {
     font-family: freight-big-pro, serif;
     font-size: 36px;
+    line-height: 46px;
     font-weight: 300;
     font-style: normal;
 }
@@ -96,56 +97,7 @@ h3 {
 
 /* projects */
 
-.work1 {
-    grid-area: work1;
-    padding-left: 10px;
-    padding-bottom: 50px;
-}
 
-.work2 {
-    grid-area: work2;
-    padding-left: 10px;
-    padding-bottom: 50px;
-
-}
-
-.work3 {
-    grid-area: work3;
-    padding-left: 10px;
-}
-
-.circle1 {
-    background-color: #81C3F8;
-    grid-area: circle1;
-
-  }
-
-.circle2 {
-    background-color: #357562;
-    grid-area: circle2;
-}
-
-.circle3 {
-    background-color: #414E68;
-    grid-area: circle3;  
-}
-
-.circle1, .circle2, .circle3 {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin: 15px auto;
-}
-
-.workGrid {
-    display: grid;
-    margin: 40px 10%;
-    justify-content: center;
-    grid-template-areas:
-    "circle1 work1"
-    "circle2 work2"
-    "circle3 work3";
-}
 
 /* about */
 
@@ -302,9 +254,7 @@ h3 {
         width: 200px;
     }
     
-    .circle1, .circle2, .circle3 {
-        margin: 20px auto;
-    }
+ 
 
     .footer {
         grid-template-areas:
